@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="gu">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ગ્રાહક સેવા કેન્દ્ર - SBI બેંકિંગ સેવા</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#eef5ff;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+
+width:100%;
+padding:18px 7%;
+background:#002b7f;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 5px 25px rgba(0,0,0,0.2);
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.logo-circle{
+
+width:65px;
+height:65px;
+border-radius:50%;
+background:linear-gradient(135deg,#0ea5ff,#ffffff);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+color:#002b7f;
+font-weight:900;
+
+}
+
+.logo-text h1{
+
+font-size:32px;
+color:white;
+font-weight:900;
+
+}
+
+.logo-text p{
+
+font-size:14px;
+color:#dbeafe;
+
+}
+
+.nav-btn{
+
+background:#25D366;
+padding:14px 28px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:700;
+font-size:18px;
+transition:0.4s;
+
+}
+
+.nav-btn:hover{
+transform:scale(1.08);
+}
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+
+background:
+linear-gradient(rgba(0,35,90,0.88),
+rgba(0,35,90,0.90)),
+url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600');
+
+background-size:cover;
+background-position:center;
+
+padding:80px 7%;
+
+display:flex;
+align-items:center;
+
+}
+
+.hero-content{
+
+width:100%;
+max-width:1450px;
+margin:auto;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:50px;
+align-items:center;
+
+}
+
+/* LEFT */
+
+.left h4{
+
+font-size:28px;
+color:#7dd3fc;
+
+}
+
+.left h1{
+
+font-size:72px;
+font-weight:900;
+line-height:1.1;
+margin-top:15px;
+color:white;
+
+}
+
+.left h1 span{
+color:#38bdf8;
+}
+
+.left p{
+
+margin-top:30px;
+font-size:20px;
+line-height:2;
+color:#dbeafe;
+
+}
+
+.hero-contact{
+
+margin-top:35px;
+display:flex;
+flex-direction:column;
+gap:20px;
+
+}
+
+.hero-contact div{
+
+display:flex;
+align-items:center;
+gap:18px;
+font-size:20px;
+color:white;
+
+}
+
+.hero-contact i{
+
+width:58px;
+height:58px;
+background:#0ea5ff;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+
+}
+
+/* RIGHT */
+
+.right{
+
+background:white;
+padding:40px;
+border-radius:35px;
+box-shadow:0 15px 45px rgba(0,0,0,0.25);
+
+}
+
+.right h2{
+
+text-align:center;
+font-size:38px;
+color:#002b7f;
+margin-bottom:35px;
+
+}
+
+.service-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
+
+}
+
+.service-card{
+
+background:#f4f9ff;
+padding:28px;
+border-radius:25px;
+text-align:center;
+transition:0.4s;
+border:2px solid transparent;
+
+}
+
+.service-card:hover{
+
+transform:translateY(-8px);
+border-color:#0ea5ff;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
+}
+
+.service-card i{
+
+font-size:55px;
+color:#002b7f;
+margin-bottom:18px;
+
+}
+
+.service-card h3{
+
+font-size:21px;
+color:#111827;
+margin-bottom:12px;
+
+}
+
+.service-card p{
+
+font-size:15px;
+color:#555;
+line-height:1.8;
+
+}
+
+.service-btn{
+
+margin-top:20px;
+display:inline-block;
+padding:12px 22px;
+border-radius:50px;
+background:#002b7f;
+color:white;
+font-weight:700;
+text-decoration:none;
+transition:0.4s;
+
+}
+
+.service-btn:hover{
+background:#0ea5ff;
+}
+
+/* INFO SECTION */
+
+.info-section{
+
+padding:90px 7%;
+
+}
+
+.info-title{
+
+text-align:center;
+font-size:50px;
+font-weight:900;
+color:#002b7f;
+margin-bottom:60px;
+
+}
+
+.info-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
+}
+
+.info-card{
+
+background:white;
+padding:35px;
+border-radius:30px;
+box-shadow:0 10px 35px rgba(0,0,0,0.08);
+transition:0.4s;
+
+}
+
+.info-card:hover{
+transform:translateY(-10px);
+}
+
+.info-card i{
+
+font-size:60px;
+color:#0ea5ff;
+margin-bottom:20px;
+
+}
+
+.info-card h3{
+
+font-size:28px;
+margin-bottom:15px;
+color:#002b7f;
+
+}
+
+.info-card p{
+
+line-height:2;
+color:#555;
+font-size:17px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#00143d;
+padding:70px 20px;
+text-align:center;
+color:white;
+
+}
+
+footer h2{
+
+font-size:45px;
+margin-bottom:20px;
+
+}
+
+footer p{
+
+font-size:18px;
+margin-top:12px;
+color:#dbeafe;
+
+}
+
+.social{
+
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:20px;
+
+}
+
+.social a{
+
+width:65px;
+height:65px;
+background:#0ea5ff;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:28px;
+text-decoration:none;
+transition:0.4s;
+
+}
+
+.social a:hover{
+transform:scale(1.1);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.left h1{
+font-size:42px;
+}
+
+.right{
+padding:25px;
+}
+
+.info-title{
+font-size:35px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+
+<div class="logo-circle">
+🏦
+</div>
+
+<div class="logo-text">
+
+<h1>ગ્રાહક સેવા કેન્દ્ર</h1>
+
+<p>SBI બેંકિંગ સેવા</p>
+
+</div>
+
+</div>
+
+<a href="https://wa.me/918866506506"
+class="nav-btn">
+
+<i class="fa-brands fa-whatsapp"></i>
+ WhatsApp
+
+</a>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<!-- LEFT -->
+
+<div class="left">
+
+<h4>🏦 બેંકિંગ અને સરકારી સેવાઓ</h4>
+
+<h1>
+બધી બેંકિંગ <br>
+<span>સેવાઓ</span> <br>
+હવે તમારા ઘર સુધી
+</h1>
+
+<p>
+
+SBI ગ્રાહક સેવા કેન્દ્ર દ્વારા
+કેશ ઉપાડ, મની ટ્રાન્સફર,
+આધાર બેંકિંગ, પાસબુક પ્રિન્ટ,
+સરકારી સેવાઓ અને ઓનલાઇન
+પેમેન્ટ સેવાઓ ઉપલબ્ધ.
+
+</p>
+
+<div class="hero-contact">
+
+<div>
+
+<i class="fa-solid fa-phone"></i>
+
+<span>+91 88 66 506 506</span>
+
+</div>
+
+<div>
+
+<i class="fa-brands fa-whatsapp"></i>
+
+<span>WhatsApp સપોર્ટ ઉપલબ્ધ</span>
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-location-dot"></i>
+
+<span>એરપોર્ટ રોડ, ભાવનગર</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="right">
+
+<h2>
+💳 બેંકિંગ સેવાઓ
+</h2>
+
+<div class="service-grid">
+
+<!-- CARD -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+<h3>કેશ ઉપાડ</h3>
+
+<p>
+આધાર અને ATM દ્વારા કેશ ઉપાડ સેવા.
+</p>
+
+<a href="https://wa.me/918866506506?text=મને%20કેશ%20ઉપાડ%20સેવા%20જોઈએ"
+class="service-btn">
+
+હવે અરજી કરો
+
+</a>
+
+</div>
+
+<!-- CARD -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-money-bill-transfer"></i>
+
+<h3>મની ટ્રાન્સફર</h3>
+
+<p>
+ઝડપી અને સુરક્ષિત પૈસા ટ્રાન્સફર સેવા.
+</p>
+
+<a href="https://wa.me/918866506506?text=મને%20મની%20ટ્રાન્સફર%20સેવા%20જોઈએ"
+class="service-btn">
+
+હવે અરજી કરો
+
+</a>
+
+</div>
+
+<!-- CARD -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<h3>ખાતું ખોલવું</h3>
+
+<p>
+નવું SBI અને Kotak બેંક ખાતું ખોલાવો.
+</p>
+
+<a href="https://wa.me/918866506506?text=મને%20નવું%20બેંક%20ખાતું%20ખોલાવવું%20છે"
+class="service-btn">
+
+હવે અરજી કરો
+
+</a>
+
+</div>
+
+<!-- CARD -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-receipt"></i>
+
+<h3>મિની સ્ટેટમેન્ટ</h3>
+
+<p>
+તાત્કાલિક મિની સ્ટેટમેન્ટ અને બેલેન્સ ચેક.
+</p>
+
+<a href="https://wa.me/918866506506?text=મને%20મિની%20સ્ટેટમેન્ટ%20જોઈએ"
+class="service-btn">
+
+હવે અરજી કરો
+
+</a>
+
+</div>
+
+<!-- CARD -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-id-card"></i>
+
+<h3>આધાર બેંકિંગ</h3>
+
+<p>
+આધાર આધારિત બેંકિંગ સેવા ઉપલબ્ધ.
+</p>
+
+<a href="https://wa.me/918866506506?text=મને%20આધાર%20બેંકિંગ%20સેવા%20જોઈએ"
+class="service-btn">
+
+હવે અરજી કરો
+
+</a>
+
+</div>
+
+<!-- CARD -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-book"></i>
+
+<h3>પાસબુક પ્રિન્ટ</h3>
+
+<p>
+પાસબુક પ્રિન્ટ અને બેંકિંગ સહાય સેવા.
+</p>
+
+<a href="https://wa.me/918866506506?text=મને%20પાસબુક%20પ્રિન્ટ%20જોઈએ"
+class="service-btn">
+
+હવે અરજી કરો
+
+</a>
+
+</div>
+
+<!-- CARD -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-hand-holding-dollar"></i>
+
+<h3>લોન માહિતી</h3>
+
+<p>
+પર્સનલ અને બિઝનેસ લોન માહિતી સેવા.
+</p>
+
+<a href="https://wa.me/918866506506?text=મને%20લોન%20માહિતી%20જોઈએ"
+class="service-btn">
+
+હવે અરજી કરો
+
+</a>
+
+</div>
+
+<!-- CARD -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+<h3>વીમા સેવા</h3>
+
+<p>
+જીવન અને અકસ્માત વીમા સેવા ઉપલબ્ધ.
+</p>
+
+<a href="https://wa.me/918866506506?text=મને%20વીમા%20સેવા%20જોઈએ"
+class="service-btn">
+
+હવે અરજી કરો
+
+</a>
+
+</div>
+
+<!-- CARD -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-users"></i>
+
+<h3>PM જનધન યોજના</h3>
+
+<p>
+PM જનધન યોજના ખાતા માટે સહાય.
+</p>
+
+<a href="https://wa.me/918866506506?text=મને%20PM%20જનધન%20યોજનાની%20માહિતી%20જોઈએ"
+class="service-btn">
+
+હવે અરજી કરો
+
+</a>
+
+</div>
+
+<!-- CARD -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-address-card"></i>
+
+<h3>PAN સેવા</h3>
+
+<p>
+PAN કાર્ડ અરજી અને સુધારા સેવા.
+</p>
+
+<a href="https://wa.me/918866506506?text=મને%20PAN%20કાર્ડ%20સેવા%20જોઈએ"
+class="service-btn">
+
+હવે અરજી કરો
+
+</a>
+
+</div>
+
+<!-- CARD -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-user-lock"></i>
+
+<h3>બેંકિંગ લોગિન</h3>
+
+<p>
+સુરક્ષિત બેંકિંગ લોગિન સહાય સેવા.
+</p>
+
+<a href="https://wa.me/918866506506?text=મને%20બેંકિંગ%20લોગિન%20સહાય%20જોઈએ"
+class="service-btn">
+
+હવે અરજી કરો
+
+</a>
+
+</div>
+
+<!-- CARD -->
+
+<div class="service-card">
+
+<i class="fa-solid fa-ticket"></i>
+
+<h3>કસ્ટમર ટોકન</h3>
+
+<p>
+ડિજિટલ કસ્ટમર ટોકન વ્યવસ્થા સેવા.
+</p>
+
+<a href="https://wa.me/918866506506?text=મને%20કસ્ટમર%20ટોકન%20જોઈએ"
+class="service-btn">
+
+હવે અરજી કરો
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- INFO SECTION -->
+
+<section class="info-section">
+
+<h2 class="info-title">
+🚀 શા માટે અમારી સેવા પસંદ કરો?
+</h2>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>ઝડપી સેવા</h3>
+
+<p>
+ઝડપી અને વિશ્વસનીય બેંકિંગ સેવાઓ
+ઘરે બેઠા ઉપલબ્ધ.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<i class="fa-solid fa-lock"></i>
+
+<h3>સુરક્ષિત સિસ્ટમ</h3>
+
+<p>
+તમારા transaction અને data સંપૂર્ણ સુરક્ષિત.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<i class="fa-solid fa-headset"></i>
+
+<h3>24x7 સપોર્ટ</h3>
+
+<p>
+WhatsApp અને Call Support હંમેશા ઉપલબ્ધ.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>
+🏦 SBI ગ્રાહક સેવા કેન્દ્ર
+</h2>
+
+<p>
+બધી બેંકિંગ અને ઓનલાઇન સેવાઓ
+</p>
+
+<p>
+📞 +91 88 66 506 506
+</p>
+
+<p>
+📍 એરપોર્ટ રોડ, ભાવનગર
+</p>
+
+<div class="social">
+
+<a href="https://wa.me/918866506506">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+<a href="tel:+918866506506">
+
+<i class="fa-solid fa-phone"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fa-solid fa-building-columns"></i>
+
+</a>
+
+</div>
+
+</footer>
+
+</body>
+
+</html>
